@@ -1,0 +1,126 @@
+a{
+  display:block !important;
+  text-decoration:none !important;
+  color:inherit !important;
+}
+
+/* start global styling */
+.container{
+  min-width:1366px;
+}
+/* end global styling */
+
+/* start header styling */
+#logo img{
+  max-height:50px;
+}
+#header > div{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+/* end header styling*/
+
+/* start our portfolio styling */
+#portfolioid{
+  display: grid;
+  margin: auto;
+  max-width: 1800px;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+}
+#portfolioid > div{
+  position:relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portfolioid > div > div{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+#portfolioid > div > div a{
+  display:block !important;
+  width:100% !important;
+  height:100% !important;
+  text-decoration:none;
+}
+#portfolioid > div > div h1{
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  text-decoration: none;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+#portfolioid > div > div h1 > span{
+  display:block !important;
+  width:100% !important;
+  font-size:16px !important;
+}
+#portfolioid > div:hover div{
+  background:rgba(0,0,0,.70);
+}
+#portfolioid > div:hover div,
+#portfolioid > div:hover > div a{
+  display:block !important;
+}
+/*#portfolioid > div:first-child,
+#portfolioid > div:nth-child(10)*/
+.horizontal{
+  grid-column: span 2;
+  grid-row: span 2;
+}
+/* end our portfolio styling */
+
+/* start footer styling */
+#footerbott{
+  background:#1b2c5d;
+  color:#fff;
+  padding-top:10px;
+  padding-bottom:10px;
+  font-size:10px;
+}
+#footercont a{
+  padding:6px 0px;
+  font-size: 14px;
+}
+/* start footer styling */
+
+/*.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+*/

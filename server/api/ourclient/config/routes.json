@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ourclients",
+      "handler": "Ourclient.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ourclients/count",
+      "handler": "Ourclient.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/ourclients/:id",
+      "handler": "Ourclient.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ourclients",
+      "handler": "Ourclient.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ourclients/:id",
+      "handler": "Ourclient.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ourclients/:id",
+      "handler": "Ourclient.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/ourclients/:id/relationships/:relation",
+      "handler": "Ourclient.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ourclients/:id/relationships/:relation",
+      "handler": "Ourclient.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ourclients/:id/relationships/:relation",
+      "handler": "Ourclient.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

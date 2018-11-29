@@ -1,0 +1,47 @@
+{
+  "connection": "default",
+  "collectionName": "footerbottoms",
+  "info": {
+    "name": "footerbottom",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "footerlogo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "footergooglepartner": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "footermenu1": {
+      "default": "",
+      "type": "text"
+    },
+    "footermenu2": {
+      "default": "",
+      "type": "text"
+    },
+    "footermenu3": {
+      "default": "",
+      "type": "text"
+    },
+    "footercopyright": {
+      "default": "",
+      "type": "text"
+    },
+    "name": {
+      "default": "",
+      "type": "string"
+    }
+  }
+}

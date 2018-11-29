@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/footerbottoms",
+      "handler": "Footerbottom.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/footerbottoms/count",
+      "handler": "Footerbottom.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/footerbottoms/:id",
+      "handler": "Footerbottom.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/footerbottoms",
+      "handler": "Footerbottom.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/footerbottoms/:id",
+      "handler": "Footerbottom.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/footerbottoms/:id",
+      "handler": "Footerbottom.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/footerbottoms/:id/relationships/:relation",
+      "handler": "Footerbottom.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/footerbottoms/:id/relationships/:relation",
+      "handler": "Footerbottom.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/footerbottoms/:id/relationships/:relation",
+      "handler": "Footerbottom.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

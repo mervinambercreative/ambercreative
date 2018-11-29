@@ -1,0 +1,76 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/frontpages",
+      "handler": "Frontpage.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/frontpages/count",
+      "handler": "Frontpage.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/frontpages/:id",
+      "handler": "Frontpage.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/frontpages",
+      "handler": "Frontpage.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/frontpages/:id",
+      "handler": "Frontpage.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/frontpages/:id",
+      "handler": "Frontpage.destroy",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/frontpages/:id/relationships/:relation",
+      "handler": "Frontpage.createRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/frontpages/:id/relationships/:relation",
+      "handler": "Frontpage.updateRelation",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/frontpages/:id/relationships/:relation",
+      "handler": "Frontpage.destroyRelation",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

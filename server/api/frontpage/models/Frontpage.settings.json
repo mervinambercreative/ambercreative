@@ -1,0 +1,42 @@
+{
+  "connection": "default",
+  "collectionName": "frontpages",
+  "info": {
+    "name": "frontpage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string",
+      "unique": true
+    },
+    "content": {
+      "default": "",
+      "type": "text"
+    },
+    "content2": {
+      "default": "",
+      "type": "text"
+    },
+    "content3": {
+      "default": "",
+      "type": "text"
+    },
+    "content4": {
+      "default": "",
+      "type": "text"
+    },
+    "homeslider": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

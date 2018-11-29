@@ -1,0 +1,29 @@
+{
+  "connection": "default",
+  "collectionName": "portfolios",
+  "info": {
+    "name": "portfolio",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "brand": {
+      "default": "",
+      "type": "string"
+    },
+    "servicerendered": {
+      "default": "",
+      "type": "string"
+    },
+    "portfolioimage": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

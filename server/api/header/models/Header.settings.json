@@ -1,0 +1,25 @@
+{
+  "connection": "default",
+  "collectionName": "headers",
+  "info": {
+    "name": "header",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "ambercreativelogo": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "menu": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

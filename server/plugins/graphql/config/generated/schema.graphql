@@ -1,0 +1,424 @@
+input createFooterbottomInput {
+  data: FooterbottomInput
+}
+
+type createFooterbottomPayload {
+  footerbottom: Footerbottom
+}
+
+input createFrontpageInput {
+  data: FrontpageInput
+}
+
+type createFrontpagePayload {
+  frontpage: Frontpage
+}
+
+input createHeaderInput {
+  data: HeaderInput
+}
+
+type createHeaderPayload {
+  header: Header
+}
+
+input createOurclientInput {
+  data: OurclientInput
+}
+
+type createOurclientPayload {
+  ourclient: Ourclient
+}
+
+input createPortfolioInput {
+  data: PortfolioInput
+}
+
+type createPortfolioPayload {
+  portfolio: Portfolio
+}
+
+input createRoleInput {
+  data: RoleInput
+}
+
+type createRolePayload {
+  role: UsersPermissionsRole
+}
+
+input createUserInput {
+  data: UserInput
+}
+
+type createUserPayload {
+  user: UsersPermissionsUser
+}
+
+"""
+The `DateTime` scalar represents a date and time following the ISO 8601 standard
+"""
+scalar DateTime
+
+input deleteFooterbottomInput {
+  where: InputID
+}
+
+type deleteFooterbottomPayload {
+  footerbottom: Footerbottom
+}
+
+input deleteFrontpageInput {
+  where: InputID
+}
+
+type deleteFrontpagePayload {
+  frontpage: Frontpage
+}
+
+input deleteHeaderInput {
+  where: InputID
+}
+
+type deleteHeaderPayload {
+  header: Header
+}
+
+input deleteOurclientInput {
+  where: InputID
+}
+
+type deleteOurclientPayload {
+  ourclient: Ourclient
+}
+
+input deletePortfolioInput {
+  where: InputID
+}
+
+type deletePortfolioPayload {
+  portfolio: Portfolio
+}
+
+input deleteRoleInput {
+  where: InputID
+}
+
+type deleteRolePayload {
+  role: UsersPermissionsRole
+}
+
+input deleteUserInput {
+  where: InputID
+}
+
+type deleteUserPayload {
+  user: UsersPermissionsUser
+}
+
+input FileInput {
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  related: [ID]
+}
+
+type Footerbottom {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  footerlogo: UploadFile
+  footergooglepartner: UploadFile
+  footermenu1: String
+  footermenu2: String
+  footermenu3: String
+  footercopyright: String
+  name: String
+}
+
+input FooterbottomInput {
+  footerlogo: ID
+  footergooglepartner: ID
+  footermenu1: String
+  footermenu2: String
+  footermenu3: String
+  footercopyright: String
+  name: String
+}
+
+type Frontpage {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String
+  content: String
+  content2: String
+  content3: String
+  content4: String
+  homeslider: UploadFile
+}
+
+input FrontpageInput {
+  name: String
+  content: String
+  content2: String
+  content3: String
+  content4: String
+  homeslider: ID
+}
+
+type Header {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  ambercreativelogo: UploadFile
+  menu: String
+}
+
+input HeaderInput {
+  ambercreativelogo: ID
+  menu: String
+}
+
+input InputID {
+  id: ID!
+}
+
+"""
+The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+"""
+scalar JSON
+
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | Footerbottom | createFooterbottomPayload | updateFooterbottomPayload | deleteFooterbottomPayload | Frontpage | createFrontpagePayload | updateFrontpagePayload | deleteFrontpagePayload | Header | createHeaderPayload | updateHeaderPayload | deleteHeaderPayload | Ourclient | createOurclientPayload | updateOurclientPayload | deleteOurclientPayload | Portfolio | createPortfolioPayload | updatePortfolioPayload | deletePortfolioPayload | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload
+
+type Mutation {
+  createFooterbottom(input: createFooterbottomInput): createFooterbottomPayload
+  updateFooterbottom(input: updateFooterbottomInput): updateFooterbottomPayload
+  deleteFooterbottom(input: deleteFooterbottomInput): deleteFooterbottomPayload
+  createFrontpage(input: createFrontpageInput): createFrontpagePayload
+  updateFrontpage(input: updateFrontpageInput): updateFrontpagePayload
+  deleteFrontpage(input: deleteFrontpageInput): deleteFrontpagePayload
+  createHeader(input: createHeaderInput): createHeaderPayload
+  updateHeader(input: updateHeaderInput): updateHeaderPayload
+  deleteHeader(input: deleteHeaderInput): deleteHeaderPayload
+  createOurclient(input: createOurclientInput): createOurclientPayload
+  updateOurclient(input: updateOurclientInput): updateOurclientPayload
+  deleteOurclient(input: deleteOurclientInput): deleteOurclientPayload
+  createPortfolio(input: createPortfolioInput): createPortfolioPayload
+  updatePortfolio(input: updatePortfolioInput): updatePortfolioPayload
+  deletePortfolio(input: deletePortfolioInput): deletePortfolioPayload
+
+  """Create a new role"""
+  createRole(input: createRoleInput): createRolePayload
+
+  """Update an existing role"""
+  updateRole(input: updateRoleInput): updateRolePayload
+
+  """Delete an existing role"""
+  deleteRole(input: deleteRoleInput): deleteRolePayload
+  createUser(input: createUserInput): createUserPayload
+  updateUser(input: updateUserInput): updateUserPayload
+  deleteUser(input: deleteUserInput): deleteUserPayload
+  upload(refId: ID, ref: String, source: String, file: Upload!): UploadFile!
+}
+
+type Ourclient {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String
+  image: UploadFile
+}
+
+input OurclientInput {
+  name: String
+  image: ID
+}
+
+type Portfolio {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  brand: String
+  servicerendered: String
+  portfolioimage: UploadFile
+}
+
+input PortfolioInput {
+  brand: String
+  servicerendered: String
+  portfolioimage: ID
+}
+
+type Query {
+  footerbottom(id: ID!): Footerbottom
+  footerbottoms(sort: String, limit: Int, start: Int, where: JSON): [Footerbottom]
+  frontpage(id: ID!): Frontpage
+  frontpages(sort: String, limit: Int, start: Int, where: JSON): [Frontpage]
+  header(id: ID!): Header
+  headers(sort: String, limit: Int, start: Int, where: JSON): [Header]
+  ourclient(id: ID!): Ourclient
+  ourclients(sort: String, limit: Int, start: Int, where: JSON): [Ourclient]
+  portfolio(id: ID!): Portfolio
+  portfolios(sort: String, limit: Int, start: Int, where: JSON): [Portfolio]
+  files(sort: String, limit: Int, start: Int, where: JSON): [UploadFile]
+  role(id: ID!): UsersPermissionsRole
+
+  """
+  Retrieve all the existing roles. You can't apply filters on this query.
+  """
+  roles(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsRole]
+  user(id: ID!): UsersPermissionsUser
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+  me: UsersPermissionsMe
+}
+
+input RoleInput {
+  name: String!
+  description: String
+  type: String
+  permissions: [ID]
+  users: [ID]
+}
+
+input updateFooterbottomInput {
+  where: InputID
+  data: FooterbottomInput
+}
+
+type updateFooterbottomPayload {
+  footerbottom: Footerbottom
+}
+
+input updateFrontpageInput {
+  where: InputID
+  data: FrontpageInput
+}
+
+type updateFrontpagePayload {
+  frontpage: Frontpage
+}
+
+input updateHeaderInput {
+  where: InputID
+  data: HeaderInput
+}
+
+type updateHeaderPayload {
+  header: Header
+}
+
+input updateOurclientInput {
+  where: InputID
+  data: OurclientInput
+}
+
+type updateOurclientPayload {
+  ourclient: Ourclient
+}
+
+input updatePortfolioInput {
+  where: InputID
+  data: PortfolioInput
+}
+
+type updatePortfolioPayload {
+  portfolio: Portfolio
+}
+
+input updateRoleInput {
+  where: InputID
+  data: RoleInput
+}
+
+type updateRolePayload {
+  role: UsersPermissionsRole
+}
+
+input updateUserInput {
+  where: InputID
+  data: UserInput
+}
+
+type updateUserPayload {
+  user: UsersPermissionsUser
+}
+
+"""
+The `Upload` scalar type represents a file upload promise that resolves an
+object containing `stream`, `filename`, `mimetype` and `encoding`.
+"""
+scalar Upload
+
+type UploadFile {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  name: String!
+  hash: String!
+  sha256: String
+  ext: String
+  mime: String!
+  size: String!
+  url: String!
+  provider: String!
+  related(sort: String, limit: Int, start: Int, where: JSON): [Morph]
+}
+
+input UserInput {
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: ID
+}
+
+type UsersPermissionsMe {
+  _id: ID!
+  username: String!
+  email: String!
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsMeRole
+}
+
+type UsersPermissionsMeRole {
+  _id: ID!
+  name: String!
+  description: String
+  type: String
+}
+
+type UsersPermissionsPermission {
+  id: ID!
+  type: String!
+  controller: String!
+  action: String!
+  enabled: Boolean!
+  policy: String
+  role: UsersPermissionsRole
+}
+
+type UsersPermissionsRole {
+  id: ID!
+  name: String!
+  description: String
+  type: String
+  permissions(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsPermission]
+  users(sort: String, limit: Int, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsUser {
+  id: ID!
+  username: String!
+  email: String!
+  provider: String
+  confirmed: Boolean
+  blocked: Boolean
+  role: UsersPermissionsRole
+}
