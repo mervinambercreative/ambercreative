@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import Aboutus from './components/Aboutus';
 import OurClients from './components/OurClients';
 import Portfolio from './components/Portfolio';
+import Career from './components/Career';
 
 import registerServiceWorker from './registerServiceWorker'; 
 
@@ -21,6 +22,7 @@ const Root = ({data}) => (
             <Route component={Aboutus} path="/aboutus"  />
             <Route component={OurClients} path="/ourclients"  />
             <Route component={Portfolio} path="/portfolio"  />
+            <Route component={Career} path="/career"  />
             <Footer />
         </React.Fragment>
     </Router>

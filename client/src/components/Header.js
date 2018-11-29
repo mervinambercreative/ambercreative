@@ -72,7 +72,7 @@ class HeaderApp extends Component {
                                             <DropdownMenu right>
                                                 <NavItem><NavLink href="/aboutus">Our Team</NavLink></NavItem>
                                                 <NavItem><NavLink href="/ourclients">Our Clients</NavLink></NavItem>
-                                                <NavItem><NavLink href="/aboutus">Career</NavLink></NavItem>
+                                                <NavItem><NavLink href="/career">Career</NavLink></NavItem>
                                             </DropdownMenu>
                                         </UncontrolledDropdown>
                                         <UncontrolledDropdown nav inNavbar>

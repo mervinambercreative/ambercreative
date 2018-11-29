@@ -1,0 +1,33 @@
+{
+  "connection": "default",
+  "collectionName": "careers",
+  "info": {
+    "name": "career",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "bannertitle": {
+      "default": "",
+      "type": "string"
+    },
+    "banner": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "position": {
+      "default": "",
+      "type": "string"
+    },
+    "designation": {
+      "default": "",
+      "type": "text"
+    }
+  }
+}

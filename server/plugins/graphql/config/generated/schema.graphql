@@ -1,3 +1,28 @@
+type Career {
+  id: ID!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  bannertitle: String
+  banner: UploadFile
+  position: String
+  designation: String
+}
+
+input CareerInput {
+  bannertitle: String
+  banner: ID
+  position: String
+  designation: String
+}
+
+input createCareerInput {
+  data: CareerInput
+}
+
+type createCareerPayload {
+  career: Career
+}
+
 input createFooterbottomInput {
   data: FooterbottomInput
 }
@@ -58,6 +83,14 @@ type createUserPayload {
 The `DateTime` scalar represents a date and time following the ISO 8601 standard
 """
 scalar DateTime
+
+input deleteCareerInput {
+  where: InputID
+}
+
+type deleteCareerPayload {
+  career: Career
+}
 
 input deleteFooterbottomInput {
   where: InputID
@@ -193,9 +226,12 @@ The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://
 """
 scalar JSON
 
-union Morph = UsersPermissionsMe | UsersPermissionsMeRole | Footerbottom | createFooterbottomPayload | updateFooterbottomPayload | deleteFooterbottomPayload | Frontpage | createFrontpagePayload | updateFrontpagePayload | deleteFrontpagePayload | Header | createHeaderPayload | updateHeaderPayload | deleteHeaderPayload | Ourclient | createOurclientPayload | updateOurclientPayload | deleteOurclientPayload | Portfolio | createPortfolioPayload | updatePortfolioPayload | deletePortfolioPayload | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload
+union Morph = UsersPermissionsMe | UsersPermissionsMeRole | Career | createCareerPayload | updateCareerPayload | deleteCareerPayload | Footerbottom | createFooterbottomPayload | updateFooterbottomPayload | deleteFooterbottomPayload | Frontpage | createFrontpagePayload | updateFrontpagePayload | deleteFrontpagePayload | Header | createHeaderPayload | updateHeaderPayload | deleteHeaderPayload | Ourclient | createOurclientPayload | updateOurclientPayload | deleteOurclientPayload | Portfolio | createPortfolioPayload | updatePortfolioPayload | deletePortfolioPayload | UploadFile | UsersPermissionsPermission | UsersPermissionsRole | createRolePayload | updateRolePayload | deleteRolePayload | UsersPermissionsUser | createUserPayload | updateUserPayload | deleteUserPayload
 
 type Mutation {
+  createCareer(input: createCareerInput): createCareerPayload
+  updateCareer(input: updateCareerInput): updateCareerPayload
+  deleteCareer(input: deleteCareerInput): deleteCareerPayload
   createFooterbottom(input: createFooterbottomInput): createFooterbottomPayload
   updateFooterbottom(input: updateFooterbottomInput): updateFooterbottomPayload
   deleteFooterbottom(input: deleteFooterbottomInput): deleteFooterbottomPayload
@@ -255,6 +291,8 @@ input PortfolioInput {
 }
 
 type Query {
+  career(id: ID!): Career
+  careers(sort: String, limit: Int, start: Int, where: JSON): [Career]
   footerbottom(id: ID!): Footerbottom
   footerbottoms(sort: String, limit: Int, start: Int, where: JSON): [Footerbottom]
   frontpage(id: ID!): Frontpage
@@ -283,6 +321,15 @@ input RoleInput {
   type: String
   permissions: [ID]
   users: [ID]
+}
+
+input updateCareerInput {
+  where: InputID
+  data: CareerInput
+}
+
+type updateCareerPayload {
+  career: Career
 }
 
 input updateFooterbottomInput {
