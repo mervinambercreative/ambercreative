@@ -44,10 +44,11 @@ class OurClientsApp extends Component {
           <Container id="ourclientid">
             <Row>
               <Col>
-                <h2>Our Clients</h2>
+                <h2 className="pageTitle">Our Clients</h2>
+                <div className="divider"></div>
               </Col>
             </Row>
-            <Row>
+            <Row id="clientLogos">
                 {/* use to display all the array content under frontpages using the map method (frontpages.map) */}
                 {/* need to use the key (frontpage.id) to have a unique identifer in retreiving the data */}
                   {ourclients.map(ourclient =>(

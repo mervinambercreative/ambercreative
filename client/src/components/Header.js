@@ -54,7 +54,7 @@ class HeaderApp extends Component {
     const { headers } = this.state; {/* use to retrieve the data on the frontpage */}
 
     return (
-        <div>
+        <div id="headerId">
             {headers.map(header =>(
                 <div>
                     <Container id="header">

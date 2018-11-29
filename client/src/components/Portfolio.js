@@ -46,7 +46,8 @@ class PortfoliosApp extends Component {
           <Container id="portfoliotitleid">
             <Row>
               <Col>
-                <h2>Our Portfolios</h2>
+                <h2 className="pageTitle">Our Portfolios</h2>
+                <div className="divider"></div>
               </Col>
             </Row>
             <Row>

@@ -1,3 +1,7 @@
+html, body{
+  font-family: 'CenturyGothic';
+}
+
 a{
   display:block !important;
   text-decoration:none !important;
@@ -6,7 +10,10 @@ a{
 
 /* start global styling */
 .container{
-  min-width:1366px;
+  max-width:90%;
+}
+h2{
+  font-size:30px;
 }
 /* end global styling */
 
@@ -18,7 +25,27 @@ a{
   padding-top:30px;
   padding-bottom:30px;
 }
-/* end header styling*/
+#headerId{
+  box-shadow:rgba(0, 0, 0, 0.1) 0px 2px 5px 0px !important;
+  margin-bottom:60px;
+}
+/* end header styling */
+
+/* start page title styling */
+.pageTitle{
+  text-align:center;
+  font-weight:bold;
+}
+.divider{
+  text-align: center;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1px;
+  background: #000;
+  margin-bottom: 40px;
+}
+/* end page title styling */
 
 /* start our portfolio styling */
 #portfolioid{
@@ -45,10 +72,12 @@ a{
   align-items: center;
 }
 #portfolioid > div > div a{
-  display:block !important;
+  display:none !important;
   width:100% !important;
   height:100% !important;
   text-decoration:none;
+  padding-left:20px;
+  padding-right:20px;
 }
 #portfolioid > div > div h1{
   color: #fff;
@@ -68,6 +97,8 @@ a{
 }
 #portfolioid > div:hover div{
   background:rgba(0,0,0,.70);
+  opacity:1.0;
+  transition:.5s;
 }
 #portfolioid > div:hover div,
 #portfolioid > div:hover > div a{
@@ -81,6 +112,21 @@ a{
 }
 /* end our portfolio styling */
 
+/* start our clients styling */
+#clientLogos img{
+  filter: gray;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  width:70%;
+}
+#clientLogos > div{
+  text-align:center;
+}
+#clientLogos img:hover{
+  filter:none;
+}
+/* end our clients styling */
+
 /* start footer styling */
 #footerbott{
   background:#1b2c5d;
@@ -92,6 +138,14 @@ a{
 #footercont a{
   padding:6px 0px;
   font-size: 14px;
+}
+#footertopid{
+  border-top:1px solid #6d6d8f;
+  margin-top:40px;
+}
+#footertopid > div > div:first-child{
+  padding-top:40px;
+  padding-bottom:40px;
 }
 /* start footer styling */
 
