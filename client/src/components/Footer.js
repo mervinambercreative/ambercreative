@@ -44,9 +44,9 @@ class FooterApp extends Component {
     return (
       <div id="footertopid">
         {footerbottoms.map(footerbottom =>(
-          <div>
+          <div key={footerbottom.id}>
             <Container id="footercont">
-              <Row key={footerbottom.id}>
+              <Row>
                   <Col md="3">
                       <Media>
                           <img src={`${apiUrl}${footerbottom.footerlogo.url}`} alt="Ambercreative" className="img-fluid"  />
